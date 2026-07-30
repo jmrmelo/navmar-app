@@ -1,0 +1,1 @@
+{"name":"NavMar","short_name":"NavMar","description":"Marine navigation POC — chart, instruments, routes, weather","start_url":"/navmar-app/","display":"standalone","background_color":"#0b1620","theme_color":"#0b1620","lang":"en","scope":"/navmar-app/","icons":[{"src":"anchor.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}]}

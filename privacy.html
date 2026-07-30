@@ -1,0 +1,306 @@
+<!doctype html>
+<!--
+  GENERATED FILE — do not edit.
+  Source: docs/privacy-policy.md
+  Regenerate: npx tsx scripts/build-privacy-page.mts
+  scripts/verify.sh fails if this file has drifted from the source.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NavMar — Privacy Policy / Política de Privacidade</title>
+<meta name="description" content="What NavMar stores on your device, what leaves it, and to whom.">
+<style>
+  :root { color-scheme: light dark; --fg: #14232f; --bg: #fbfbf9; --muted: #5b6b78;
+          --rule: #d8dde1; --accent: #0d5c78; --code-bg: #eef1f3; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg: #dfe7ec; --bg: #0b1620; --muted: #93a5b1; --rule: #24313c;
+            --accent: #7fd0ea; --code-bg: #16242f; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 16px/1.65 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 6rem; }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 2.5rem 0 0.75rem; }
+  h1:first-child { margin-top: 0; }
+  h2 { font-size: 1.25rem; margin: 2.25rem 0 0.5rem; }
+  h3 { font-size: 1.05rem; margin: 1.75rem 0 0.4rem; }
+  p, ul { margin: 0 0 1rem; }
+  ul { padding-left: 1.25rem; }
+  li { margin-bottom: 0.35rem; }
+  a { color: var(--accent); }
+  code { background: var(--code-bg); border-radius: 3px; padding: 0.1em 0.35em;
+         font: 0.875em/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+         overflow-wrap: anywhere; }
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0; }
+  blockquote { margin: 1.25rem 0; padding: 0.75rem 1rem; border-left: 3px solid var(--rule);
+               background: var(--code-bg); border-radius: 0 4px 4px 0; }
+  blockquote p:last-child { margin-bottom: 0; }
+  .scroll { overflow-x: auto; margin: 0 0 1.25rem; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+  th, td { border: 1px solid var(--rule); padding: 0.45rem 0.6rem; text-align: left;
+           vertical-align: top; }
+  th { background: var(--code-bg); }
+</style>
+</head>
+<body>
+<main>
+<h1>NavMar — Privacy Policy / Política de Privacidade</h1>
+
+<p><strong>Last updated / Última atualização: 2026-07-30</strong> Applies to / Aplica-se a: the NavMar Android app (<code>pt.navmar.app</code>) and the NavMar web app at <a href="https://jmrmelo.github.io/navmar-app/">https://jmrmelo.github.io/navmar-app/</a>.</p>
+
+<blockquote><p><strong>Canonical source.</strong> This file is the source text. The page served to users is generated from it by <code>scripts/build-privacy-page.mts</code> into <code>public/privacy.html</code>, which <code>scripts/deploy-pages.sh</code> publishes to <strong><a href="https://jmrmelo.github.io/navmar-app/privacy.html">https://jmrmelo.github.io/navmar-app/privacy.html</a></strong> — that is the URL to give Google Play. <code>scripts/verify.sh</code> fails if the generated page has drifted from this file, so the published policy cannot silently stop matching the reviewed text.</p></blockquote>
+
+<hr>
+
+<h1>English</h1>
+
+<h2>Who is responsible</h2>
+
+<p>NavMar is a personal, non-commercial evaluation project by <strong>João Melo</strong>. Contact: <strong>joaomarcelo.melo@jumia.com</strong>. There is no company, no data-processing department and no advertising business behind it.</p>
+
+<h2>The short version</h2>
+
+<p>NavMar has <strong>no account, no login and no sync</strong>. Everything you create in it — routes, waypoints, tracks, your vessel profile, your language choice, your settings — is written to a database on your own device and never sent anywhere by us.</p>
+
+<p>Your <strong>position</strong>, however, does leave the device, because three features cannot work without it being sent somewhere. Two of them are switched off until you switch them on; one of them (weather and tides) is on by default. Exactly which, and to whom, is below.</p>
+
+<p>There is <strong>no analytics SDK, no crash-reporting SDK, no advertising SDK and no tracking of any kind</strong> in NavMar. That is a statement about the dependency list, not an aspiration: the Android app's complete set of third-party runtime packages is <code>@maplibre/maplibre-react-native</code>, <code>@react-native-community/netinfo</code>, <code>expo</code>, <code>expo-asset</code>, <code>expo-file-system</code>, <code>expo-keep-awake</code>, <code>expo-location</code>, <code>expo-sensors</code>, <code>expo-sqlite</code>, <code>expo-status-bar</code>, <code>expo-system-ui</code>, <code>react</code>, <code>react-native</code>, <code>react-native-safe-area-context</code> and <code>zustand</code> (see <code>mobile/package.json</code>). None of them is an analytics, attribution, advertising or crash-reporting product. Expo's own over-the-air update service is disabled in this build (<code>expo.modules.updates.ENABLED = false</code>).</p>
+
+<h2>What stays on your device, always</h2>
+
+<p>Stored in a local SQLite database in the app's private storage, and in the browser's IndexedDB on the web:</p>
+
+<ul>
+  <li>Routes and waypoints, including names you type.</li>
+  <li>Recorded tracks — the breadcrumb of where you have been.</li>
+  <li>Your vessel profile: name, length, draught, cruise speed, fuel capacity and consumption figures.</li>
+  <li>Which layers you have on, your chosen language, units, the active leg of a route, and whether you have acknowledged the first-run legal notice.</li>
+  <li>The last weather and orca snapshots the app fetched, cached so that the app can degrade honestly rather than show a spinner when you are out of signal.</li>
+  <li>The phone's <strong>barometer</strong> reading, if it has one, shown as a pressure field. Read on the device, used on the device, never transmitted.</li>
+</ul>
+
+<p>None of this is uploaded, backed up to a server we control, or shared. <strong>There is no server that holds your data</strong>, because there is no account system to attach it to. Uninstalling the app deletes all of it, including your routes and tracks. We cannot recover it for you, because we never had it.</p>
+
+<p><em>Note:</em> Android's own <strong>"Back up to Google Drive"</strong> setting is enabled for this app (<code>android:allowBackup="true"</code>, the platform default). If you have that switched on in your Android settings, Android — not NavMar — may include the app's private files in your own Google account backup. That is a transfer between you and Google under Google's terms; NavMar has no access to it and it does not go to us.</p>
+
+<h2>What is sent off the device, and to whom</h2>
+
+<h3>1. Weather and tides — Open-Meteo (on by default)</h3>
+
+<p>To show wind, pressure, temperature, wave height and the tide curve where you actually are, the app sends <strong>your coordinates</strong> to Open-Meteo:</p>
+
+<ul>
+  <li><code>https://api.open-meteo.com/v1/forecast?latitude=…&amp;longitude=…</code></li>
+  <li><code>https://marine-api.open-meteo.com/v1/marine?latitude=…&amp;longitude=…</code></li>
+</ul>
+
+<p>Full precision latitude and longitude, in the query string. Nothing else — no identifier, no device information beyond what any HTTP request unavoidably carries (your IP address and the platform's user-agent string, which Open-Meteo receives as the recipient of the request, not because we add them). Open-Meteo is an independent service with its own privacy policy: <a href="https://open-meteo.com/en/terms">https://open-meteo.com/en/terms</a>.</p>
+
+<p>This is the one position-sharing path that is <strong>active without you enabling anything</strong>, because a marine app with no weather is not useful. If you do not want it, turn the weather panel off; with it off, no request is made.</p>
+
+<h3>2. AIS vessel traffic — only when you enable it</h3>
+
+<p>When you switch the AIS layer on, the app asks for other vessels' positions inside the area you are looking at. It sends a <strong>bounding box</strong> — four numbers, the corners of the visible chart area — not a point:</p>
+
+<p><code>/api/ais/stream?bbox=minLat,minLon,maxLat,maxLon</code></p>
+
+<p>That request goes to a small <strong>NavMar-operated proxy</strong> (<code>server/ais.ts</code>), which holds a single connection to <strong>aisstream.io</strong> and subscribes to that area on your behalf. So aisstream.io sees the proxy, and the proxy sees the box. The proxy keeps a short-lived, in-memory list of the vessels currently in view in order to answer; it writes nothing to disk and has no database.</p>
+
+<p>A bounding box is coarser than a position, but be clear-eyed: a box drawn around what you are looking at usually contains you. Treat enabling AIS as sharing your rough whereabouts.</p>
+
+<p><strong>In the Android internal-testing build this feature cannot reach anything.</strong> The proxy address is compiled in as <code>http://10.0.2.2:8787</code>, which is the Android <em>emulator's</em> alias for a developer machine's loopback; on a real phone it points at nothing, and the layer reports that it is unreachable. Nothing is transmitted.</p>
+
+<h3>3. AI copilot — only when you use it</h3>
+
+<p>If you ask the copilot a question, the app sends, over one HTTPS request:</p>
+
+<ul>
+  <li>your question and the earlier turns of that conversation;</li>
+  <li>a <strong>snapshot of app state</strong>: your routes and their waypoints, your vessel profile, your current fix (position, speed, course, and its age), and your language.</li>
+</ul>
+
+<p>This goes to a NavMar-operated proxy (<code>server/copilot.ts</code>), which calls the <strong>Anthropic</strong> API to produce the answer. Anthropic therefore processes your question and that snapshot as part of answering it; see <a href="https://www.anthropic.com/legal/privacy">https://www.anthropic.com/legal/privacy</a>. The proxy is <strong>stateless</strong> — every request carries its own history, nothing is stored between requests, and there is no conversation log on any server. Weather look-ups the copilot performs on your behalf reach Open-Meteo exactly as in §1.</p>
+
+<p>If you never open the copilot, none of this happens.</p>
+
+<p><strong>In the Android internal-testing build this feature cannot reach anything either</strong>, for the same reason as AIS, and it says so plainly instead of failing quietly.</p>
+
+<h3>4. Map layers you switch on — a tile request reveals where you are looking</h3>
+
+<p>The offline base chart is bundled inside the app and needs no network at all. Every <em>additional</em> layer is fetched live, and any tile request necessarily tells its server which part of the world you asked for. The app makes no such request for a layer you have not enabled.</p>
+
+<div class="scroll"><table>
+<thead><tr><th>Layer</th><th>Host</th><th>What it receives</th></tr></thead>
+<tbody>
+<tr><td>Satellite imagery</td><td><code>server.arcgisonline.com</code> (Esri World Imagery)</td><td>tile coordinates</td></tr>
+<tr><td>Seamarks / buoyage</td><td><code>tiles.openseamap.org</code> (OpenSeaMap)</td><td>tile coordinates</td></tr>
+<tr><td>Depths and isobaths</td><td><code>ows.emodnet-bathymetry.eu</code> (EMODnet Bathymetry, EU)</td><td>the map area requested</td></tr>
+<tr><td>Instituto Hidrográfico chart marks</td><td><code>webgeo2.hidrografico.pt</code>, <code>webgeo4.hidrografico.pt</code></td><td>the map area requested</td></tr>
+<tr><td>Orca warnings</td><td><code>webgeo2.hidrografico.pt</code> (ANAVNET, CC BY 4.0)</td><td><strong>a fixed box covering the whole Portuguese coast, not your position</strong> — the app deliberately does not narrow this request to where you are</td></tr>
+<tr><td>Web base map fonts (web app only)</td><td><code>protomaps.github.io</code></td><td>which glyph ranges are needed</td></tr>
+</tbody>
+</table></div>
+
+<p>Instituto Hidrográfico is a Portuguese public body; EMODnet is an EU service. Each has its own terms; NavMar sends them no identifier and no account.</p>
+
+<h3>5. Vessel photos — Wikimedia, and only for a vessel you tap</h3>
+
+<p>When you open the detail card for an AIS vessel, the app looks up a photograph of that ship by its <strong>IMO number</strong> at <code>query.wikidata.org</code> (Wikidata SPARQL) and <code>commons.wikimedia.org</code> (the Commons API), and loads the image from <code>upload.wikimedia.org</code>. What is transmitted is the <strong>ship's</strong> identifier — never yours, never your position. Photographs carry mandatory attribution and their own licences, shown on the card. Wikimedia's privacy policy: <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">https://foundation.wikimedia.org/wiki/Policy:Privacy_policy</a>.</p>
+
+<h2>Location permission on Android</h2>
+
+<p>NavMar requests <code>ACCESS_FINE_LOCATION</code> and <code>ACCESS_COARSE_LOCATION</code>, and asks for them only at the moment you switch <strong>Position source</strong> to <strong>GPS</strong> — not at first launch. The app opens in <strong>Simulator</strong> mode with a demonstration position off Cascais, and if you never grant the permission it stays there and remains fully usable for planning.</p>
+
+<p><strong>Foreground only.</strong> Background location is explicitly disabled (<code>isAndroidBackgroundLocationEnabled: false</code>); the app has no <code>ACCESS_BACKGROUND_LOCATION</code> permission and cannot read your position when it is not open. <code>WAKE_LOCK</code> is requested so the screen can be kept on while you are navigating, which is a display setting and not a location capability.</p>
+
+<p>The position is used to draw your boat, compute bearings, distances, cross-track error and fuel, record a track if you start one, and — per §1–3 above — to fetch weather and, if you enable them, AIS and copilot answers.</p>
+
+<p>Two permissions appear in the app's Play listing that NavMar does not use, both inherited from libraries rather than declared by us: <code>SYSTEM_ALERT_WINDOW</code> ("display over other apps"), which comes from the Expo template's development overlay, and <code>ACTIVITY_RECOGNITION</code> ("physical activity"), which comes from <code>expo-sensors</code> — of which NavMar uses only the barometer. <strong>Neither is ever requested at runtime</strong>, so <code>ACTIVITY_RECOGNITION</code>, being a permission Android must ask you for, is never granted. No activity or fitness data is read.</p>
+
+<h2>Children</h2>
+
+<p>NavMar is not directed at children. It is a tool for operating a boat and has no content designed for or appealing to under-13s. We do not knowingly collect anything from a child.</p>
+
+<h2>Legal basis and your rights (GDPR / RGPD)</h2>
+
+<p>For the position sent to Open-Meteo, and for anything sent to the AIS feed or the copilot, the basis is the <strong>performance of the service you asked for</strong> — and for AIS and the copilot, your explicit act of enabling them. You can withdraw at any time by turning the feature off; there is nothing to delete afterwards, because nothing was stored.</p>
+
+<p>Because there is no account, no identifier and no server-side record, we hold no personal data about you and there is consequently nothing for us to export, correct or erase. Your data is in your hands, on your device: delete a route in the app, or uninstall it to remove everything. For the data you have sent to Open-Meteo, Anthropic or Wikimedia by using those features, address those organisations' own policies, linked above.</p>
+
+<h2>What NavMar is not</h2>
+
+<p>NavMar is a planning aid, not a navigation system. It is not an approved Electronic Chart System and its charts are not official nautical charts. This policy is about privacy; the safety notice is in the app under <strong>About → Legal / notices</strong> and in <code>docs/legal/disclaimer-and-terms.md</code>, and it matters more.</p>
+
+<h2>Changes</h2>
+
+<p>Material changes will be published on this page with a new date at the top. The app's version this policy was written against is <strong>1.0.0 (versionCode 2)</strong>.</p>
+
+<hr>
+
+<h1>Português (pt-PT)</h1>
+
+<h2>Quem é o responsável</h2>
+
+<p>O NavMar é um projeto pessoal e não comercial de avaliação, de <strong>João Melo</strong>. Contacto: <strong>joaomarcelo.melo@jumia.com</strong>. Não existe empresa, departamento de tratamento de dados nem qualquer negócio de publicidade por trás dele.</p>
+
+<h2>A versão curta</h2>
+
+<p>O NavMar <strong>não tem conta, não tem sessão e não tem sincronização</strong>. Tudo o que cria na aplicação — rotas, pontos de passagem, esteiras, o perfil da embarcação, o idioma escolhido, as suas preferências — é escrito numa base de dados no seu próprio dispositivo e nunca é enviado para nenhum lado por nós.</p>
+
+<p>A sua <strong>posição</strong>, no entanto, sai do dispositivo, porque três funcionalidades não funcionam sem que ela seja enviada para algum sítio. Duas delas estão desligadas até que as ligue; uma (meteorologia e marés) está ligada por omissão. Quais e para quem, está abaixo.</p>
+
+<p><strong>Não há SDK de analítica, nem de relatórios de erro, nem de publicidade, nem qualquer forma de rastreio</strong> no NavMar. Isto é uma afirmação sobre a lista de dependências e não uma intenção: o conjunto completo de pacotes de terceiros usados em execução pela aplicação Android é <code>@maplibre/maplibre-react-native</code>, <code>@react-native-community/netinfo</code>, <code>expo</code>, <code>expo-asset</code>, <code>expo-file-system</code>, <code>expo-keep-awake</code>, <code>expo-location</code>, <code>expo-sensors</code>, <code>expo-sqlite</code>, <code>expo-status-bar</code>, <code>expo-system-ui</code>, <code>react</code>, <code>react-native</code>, <code>react-native-safe-area-context</code> e <code>zustand</code> (ver <code>mobile/package.json</code>). Nenhum deles é um produto de analítica, atribuição, publicidade ou relatório de erros. O serviço de atualizações remotas da Expo está desativado nesta compilação (<code>expo.modules.updates.ENABLED = false</code>).</p>
+
+<h2>O que fica sempre no seu dispositivo</h2>
+
+<p>Guardado numa base de dados SQLite local, no armazenamento privado da aplicação, e no IndexedDB do navegador na versão web:</p>
+
+<ul>
+  <li>Rotas e pontos de passagem, incluindo os nomes que escreve.</li>
+  <li>Esteiras registadas — o rasto de onde andou.</li>
+  <li>O perfil da embarcação: nome, comprimento, calado, velocidade de cruzeiro, capacidade de combustível e consumos.</li>
+  <li>Que camadas tem ligadas, o idioma, as unidades, a perna ativa de uma rota e se já aceitou o aviso legal do primeiro arranque.</li>
+  <li>O último instantâneo de meteorologia e de orcas obtido, em cache, para que a aplicação possa degradar-se honestamente em vez de mostrar um indicador de espera quando está sem rede.</li>
+  <li>A leitura do <strong>barómetro</strong> do telefone, se o tiver, apresentada como campo de pressão. Lida no dispositivo, usada no dispositivo, nunca transmitida.</li>
+</ul>
+
+<p>Nada disto é carregado para servidores, copiado para um servidor nosso nem partilhado. <strong>Não existe servidor que guarde os seus dados</strong>, porque não existe sistema de contas a que os associar. Desinstalar a aplicação apaga tudo, incluindo rotas e esteiras. Não podemos recuperá-los, porque nunca os tivemos.</p>
+
+<p><em>Nota:</em> a opção do próprio Android <strong>«Cópia de segurança no Google Drive»</strong> está ativada para esta aplicação (<code>android:allowBackup="true"</code>, a predefinição da plataforma). Se a tiver ligada nas definições do telefone, o Android — não o NavMar — pode incluir os ficheiros privados da aplicação na cópia de segurança da sua conta Google. Essa transferência é entre si e a Google, ao abrigo dos termos da Google; o NavMar não tem acesso a ela e nada disso vem para nós.</p>
+
+<h2>O que sai do dispositivo, e para quem</h2>
+
+<h3>1. Meteorologia e marés — Open-Meteo (ligado por omissão)</h3>
+
+<p>Para mostrar vento, pressão, temperatura, altura de onda e a curva de maré no local onde está, a aplicação envia as <strong>suas coordenadas</strong> ao Open-Meteo:</p>
+
+<ul>
+  <li><code>https://api.open-meteo.com/v1/forecast?latitude=…&amp;longitude=…</code></li>
+  <li><code>https://marine-api.open-meteo.com/v1/marine?latitude=…&amp;longitude=…</code></li>
+</ul>
+
+<p>Latitude e longitude com precisão total, na query string. Mais nada — nenhum identificador, nenhuma informação do dispositivo além daquilo que qualquer pedido HTTP transporta inevitavelmente (o seu endereço IP e a cadeia de user-agent da plataforma, que o Open-Meteo recebe por ser o destinatário do pedido, não porque os acrescentemos). O Open-Meteo é um serviço independente, com a sua própria política: <a href="https://open-meteo.com/en/terms">https://open-meteo.com/en/terms</a>.</p>
+
+<p>Este é o único envio de posição <strong>ativo sem que ligue nada</strong>, porque uma aplicação marítima sem meteorologia não serve de muito. Se não o quiser, desligue o painel de meteorologia; com ele desligado não é feito nenhum pedido.</p>
+
+<h3>2. Tráfego AIS — apenas quando o ativa</h3>
+
+<p>Quando liga a camada AIS, a aplicação pede as posições de outras embarcações dentro da área que está a ver. Envia uma <strong>caixa delimitadora</strong> — quatro números, os cantos da área visível da carta — e não um ponto:</p>
+
+<p><code>/api/ais/stream?bbox=minLat,minLon,maxLat,maxLon</code></p>
+
+<p>Esse pedido vai para um pequeno <strong>proxy operado pelo NavMar</strong> (<code>server/ais.ts</code>), que mantém uma única ligação ao <strong>aisstream.io</strong> e subscreve essa área em seu nome. Assim, o aisstream.io vê o proxy e o proxy vê a caixa. O proxy mantém em memória, por pouco tempo, a lista das embarcações atualmente visíveis para poder responder; não escreve nada em disco e não tem base de dados.</p>
+
+<p>Uma caixa é mais grosseira do que uma posição, mas sem ilusões: uma caixa desenhada em torno daquilo que está a ver contém-no, normalmente. Considere que ligar o AIS é partilhar aproximadamente onde está.</p>
+
+<p><strong>Na compilação Android de teste interno esta funcionalidade não consegue alcançar nada.</strong> O endereço do proxy está compilado como <code>http://10.0.2.2:8787</code>, que é o alias do <em>emulador</em> Android para o loopback da máquina de desenvolvimento; num telefone real não aponta para nada, e a camada informa que está inacessível. Nada é transmitido.</p>
+
+<h3>3. Copiloto de IA — apenas quando o usa</h3>
+
+<p>Se fizer uma pergunta ao copiloto, a aplicação envia, num pedido HTTPS:</p>
+
+<ul>
+  <li>a sua pergunta e os turnos anteriores dessa conversa;</li>
+  <li>um <strong>resumo do estado da aplicação</strong>: as suas rotas e respetivos pontos de passagem, o perfil da embarcação, a sua posição atual (posição, velocidade, rumo e a idade do fixo) e o idioma.</li>
+</ul>
+
+<p>Vai para um proxy operado pelo NavMar (<code>server/copilot.ts</code>), que chama a API da <strong>Anthropic</strong> para produzir a resposta. A Anthropic trata, portanto, a sua pergunta e esse resumo como parte da resposta; ver <a href="https://www.anthropic.com/legal/privacy">https://www.anthropic.com/legal/privacy</a>. O proxy é <strong>sem estado</strong> — cada pedido transporta o seu próprio histórico, nada é guardado entre pedidos e não existe registo de conversas em nenhum servidor. As consultas de meteorologia que o copiloto faça por sua conta chegam ao Open-Meteo exatamente como em §1.</p>
+
+<p>Se nunca abrir o copiloto, nada disto acontece.</p>
+
+<p><strong>Na compilação Android de teste interno esta funcionalidade também não consegue alcançar nada</strong>, pela mesma razão do AIS, e di-lo claramente em vez de falhar em silêncio.</p>
+
+<h3>4. Camadas do mapa que liga — um pedido de tile revela para onde está a olhar</h3>
+
+<p>A carta base offline vem dentro da aplicação e não necessita de rede. Todas as camadas <em>adicionais</em> são obtidas em tempo real, e qualquer pedido de tile diz necessariamente ao respetivo servidor que parte do mundo pediu. A aplicação não faz nenhum pedido para uma camada que não tenha ligado.</p>
+
+<div class="scroll"><table>
+<thead><tr><th>Camada</th><th>Servidor</th><th>O que recebe</th></tr></thead>
+<tbody>
+<tr><td>Imagem de satélite</td><td><code>server.arcgisonline.com</code> (Esri World Imagery)</td><td>coordenadas de tile</td></tr>
+<tr><td>Balizagem / marcas</td><td><code>tiles.openseamap.org</code> (OpenSeaMap)</td><td>coordenadas de tile</td></tr>
+<tr><td>Profundidades e isóbatas</td><td><code>ows.emodnet-bathymetry.eu</code> (EMODnet Bathymetry, UE)</td><td>a área de mapa pedida</td></tr>
+<tr><td>Marcas do Instituto Hidrográfico</td><td><code>webgeo2.hidrografico.pt</code>, <code>webgeo4.hidrografico.pt</code></td><td>a área de mapa pedida</td></tr>
+<tr><td>Avisos de orcas</td><td><code>webgeo2.hidrografico.pt</code> (ANAVNET, CC BY 4.0)</td><td><strong>uma caixa fixa que cobre toda a costa portuguesa, não a sua posição</strong> — a aplicação deliberadamente não restringe este pedido ao local onde está</td></tr>
+<tr><td>Fontes do mapa base (só na versão web)</td><td><code>protomaps.github.io</code></td><td>que gamas de glifos são necessárias</td></tr>
+</tbody>
+</table></div>
+
+<p>O Instituto Hidrográfico é um organismo público português; o EMODnet é um serviço da UE. Cada um tem os seus termos; o NavMar não lhes envia identificador nem conta.</p>
+
+<h3>5. Fotografias de embarcações — Wikimedia, e só para a embarcação que toca</h3>
+
+<p>Quando abre o cartão de detalhe de uma embarcação AIS, a aplicação procura uma fotografia desse navio pelo respetivo <strong>número IMO</strong> em <code>query.wikidata.org</code> (SPARQL da Wikidata) e <code>commons.wikimedia.org</code> (API do Commons), e carrega a imagem de <code>upload.wikimedia.org</code>. O que é transmitido é o identificador <strong>do navio</strong> — nunca o seu, nunca a sua posição. As fotografias têm atribuição obrigatória e licenças próprias, mostradas no cartão. Política de privacidade da Wikimedia: <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">https://foundation.wikimedia.org/wiki/Policy:Privacy_policy</a>.</p>
+
+<h2>Permissão de localização no Android</h2>
+
+<p>O NavMar pede <code>ACCESS_FINE_LOCATION</code> e <code>ACCESS_COARSE_LOCATION</code>, e pede-as apenas no momento em que muda a <strong>Fonte de posição</strong> para <strong>GPS</strong> — não no primeiro arranque. A aplicação abre em modo <strong>Simulador</strong>, com uma posição de demonstração ao largo de Cascais, e se nunca conceder a permissão fica assim e continua plenamente utilizável para planeamento.</p>
+
+<p><strong>Apenas em primeiro plano.</strong> A localização em segundo plano está explicitamente desativada (<code>isAndroidBackgroundLocationEnabled: false</code>); a aplicação não tem a permissão <code>ACCESS_BACKGROUND_LOCATION</code> e não consegue ler a sua posição quando não está aberta. O <code>WAKE_LOCK</code> é pedido para manter o ecrã aceso durante a navegação, o que é uma definição de ecrã e não uma capacidade de localização.</p>
+
+<p>A posição é usada para desenhar o seu barco, calcular rumos, distâncias, erro de afastamento (XTE) e combustível, registar uma esteira se iniciar uma, e — nos termos de §1 a §3 — para obter meteorologia e, se as ativar, AIS e respostas do copiloto.</p>
+
+<p>Há duas permissões que aparecem na listagem da aplicação no Play e que o NavMar não usa, ambas herdadas de bibliotecas e não declaradas por nós: <code>SYSTEM_ALERT_WINDOW</code> («sobrepor a outras aplicações»), que vem da camada de desenvolvimento do modelo da Expo, e <code>ACTIVITY_RECOGNITION</code> («atividade física»), que vem do <code>expo-sensors</code> — do qual o NavMar usa apenas o barómetro. <strong>Nenhuma delas é pedida em execução</strong>, pelo que a <code>ACTIVITY_RECOGNITION</code>, sendo uma permissão que o Android tem de lhe pedir, nunca é concedida. Não é lido qualquer dado de atividade ou de exercício físico.</p>
+
+<h2>Crianças</h2>
+
+<p>O NavMar não se dirige a crianças. É uma ferramenta para conduzir uma embarcação e não tem conteúdos concebidos para menores de 13 anos nem apelativos para eles. Não recolhemos conscientemente nada de uma criança.</p>
+
+<h2>Fundamento jurídico e os seus direitos (RGPD)</h2>
+
+<p>Para a posição enviada ao Open-Meteo, e para tudo o que seja enviado ao AIS ou ao copiloto, o fundamento é a <strong>execução do serviço que pediu</strong> — e, no caso do AIS e do copiloto, o seu ato explícito de os ativar. Pode retirar essa vontade a qualquer momento desligando a funcionalidade; não há nada para apagar depois, porque nada foi guardado.</p>
+
+<p>Como não existe conta, identificador nem registo do lado do servidor, não detemos dados pessoais seus e, consequentemente, não há nada que possamos exportar, corrigir ou apagar. Os seus dados estão nas suas mãos, no seu dispositivo: apague uma rota na aplicação, ou desinstale-a para remover tudo. Quanto aos dados que enviou ao Open-Meteo, à Anthropic ou à Wikimedia ao usar essas funcionalidades, dirija-se às políticas dessas organizações, ligadas acima.</p>
+
+<h2>O que o NavMar não é</h2>
+
+<p>O NavMar é um auxílio ao planeamento, não um sistema de navegação. Não é um sistema de cartas eletrónicas aprovado e as suas cartas não são cartas náuticas oficiais. Esta política é sobre privacidade; o aviso de segurança está na aplicação em <strong>Sobre → Legal / avisos</strong> e em <code>docs/legal/disclaimer-and-terms.md</code>, e é mais importante.</p>
+
+<h2>Alterações</h2>
+
+<p>Alterações materiais serão publicadas nesta página com uma nova data no topo. A versão da aplicação para a qual esta política foi escrita é <strong>1.0.0 (versionCode 2)</strong>.</p>
+</main>
+</body>
+</html>

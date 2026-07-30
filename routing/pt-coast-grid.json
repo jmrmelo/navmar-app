@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "bbox": {
+    "latMin": 36.8,
+    "lonMin": -9.8,
+    "latMax": 42.20064678404599,
+    "lonMax": -7.2993378316056745
+  },
+  "requestedBbox": {
+    "latMin": 36.8,
+    "lonMin": -9.8,
+    "latMax": 42.2,
+    "lonMax": -7.3
+  },
+  "width": 2148,
+  "height": 6012,
+  "cellLatDeg": 0.0008983111749910168,
+  "cellLonDeg": 0.0011641816426416788,
+  "cellMeters": 100,
+  "shoreBufferMeters": 200,
+  "sizeBytes": 1614222,
+  "waterCells": 4894446,
+  "coastlineOnlyWaterCells": 4932689,
+  "packing": {
+    "order": "row-major",
+    "rowOrigin": "south",
+    "bitOrder": "lsb-first",
+    "setBitMeans": "water"
+  },
+  "builtAt": "2026-07-28T18:04:58.055Z",
+  "source": "OpenStreetMap natural=coastline via Overpass API (data (c) OpenStreetMap contributors, ODbL 1.0)",
+  "note": "Continental Portugal coastal band ONLY (v2) — Madeira and the Azores are not covered. Eastern limit is lon -7.30 (a few km east of the Guadiana / Spanish border at Vila Real de Santo Antonio), so the whole Algarve — Albufeira, Portimao, Lagos, Faro, Olhao, Tavira, VRSA — is inside the bbox and routable; task 16's bbox stopped at -8.4 and left the eastern Algarve with charts but no routing. Land/water only: coastline rasterised conservatively at ~100 m (a cell is land if the shoreline touches it at all), flood-filled from the open sea so a cell is navigable only if it is genuinely connected to the sea, then every cell within 200 m of mapped land is reclassified as land — the shoreline survey, the raster and the sand itself are all less precise than that. Deliberately over-marks land: channels, river mouths and harbour entrances narrower than ~400 m are closed. Carries NO depth, tide, current, or charted-hazard information — route suggestions built from it avoid land, nothing else. Not for navigation."
+}

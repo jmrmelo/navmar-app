@@ -1,0 +1,70 @@
+{
+  "name": "pt-coast",
+  "bbox": [
+    -31.4,
+    32.55,
+    -7.35,
+    42.2
+  ],
+  "minzoom": 0,
+  "maxzoom": 13,
+  "sizeBytes": 74881448,
+  "builtAt": "2026-07-28T11:53:32.133Z",
+  "source": "https://build.protomaps.com/20260728.pmtiles",
+  "regions": [
+    {
+      "name": "continental-west",
+      "bbox": [
+        -10.2,
+        37,
+        -8.4,
+        42.2
+      ]
+    },
+    {
+      "name": "continental-south",
+      "bbox": [
+        -9,
+        36.7,
+        -7.35,
+        37.5
+      ]
+    },
+    {
+      "name": "madeira",
+      "bbox": [
+        -17.35,
+        32.55,
+        -16.2,
+        33.15
+      ]
+    },
+    {
+      "name": "azores-west",
+      "bbox": [
+        -31.4,
+        39.3,
+        -30.9,
+        39.8
+      ]
+    },
+    {
+      "name": "azores-central",
+      "bbox": [
+        -28.95,
+        38.3,
+        -26.95,
+        39.2
+      ]
+    },
+    {
+      "name": "azores-east",
+      "bbox": [
+        -25.95,
+        36.85,
+        -24.7,
+        37.95
+      ]
+    }
+  ]
+}
